@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RazorPagesMovie.Data;
+using MovieApp.Data;
 
-namespace RazorPagesMovie.Migrations
+namespace MovieApp.Migrations
 {
-    [DbContext(typeof(RazorPagesMovieContext))]
+    [DbContext(typeof(MovieContext))]
     [Migration("20211112134221_InitialCreate")]
     partial class InitialCreate
     {

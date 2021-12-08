@@ -5,22 +5,21 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using RazorPagesMovie.Data;
-using RazorPagesMovie.Models;
+using MovieApp.Data;
 
-namespace RazorPagesMovie.Pages.Movies
+namespace MovieApp.Pages.Movies
 {
     public class DeleteModel : PageModel
     {
-        private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
+        private readonly MovieContext _context;
 
-        public DeleteModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
+        public DeleteModel(MovieContext context)
         {
             _context = context;
         }
 
         [BindProperty]
-        public Movie Movie { get; set; }
+        public Models.Movie Movie { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {

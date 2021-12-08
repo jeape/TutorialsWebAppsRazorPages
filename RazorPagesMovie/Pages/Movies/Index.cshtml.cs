@@ -6,21 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using RazorPagesMovie.Data;
-using RazorPagesMovie.Models;
+using MovieApp.Data;
 
-namespace RazorPagesMovie.Pages.Movies
+namespace MovieApp.Pages.Movies
 {
     public class IndexModel : PageModel
     {
-        private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
+        private readonly MovieContext _context;
 
-        public IndexModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
+        public IndexModel(MovieContext context)
         {
             _context = context;
         }
 
-        public IList<Movie> Movie { get;set; }
+        public IList<Models.Movie> Movie { get;set; }
 
         [BindProperty(SupportsGet = true)]
         public String SearchString { get; set; }

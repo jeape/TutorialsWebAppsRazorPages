@@ -9,9 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-using RazorPagesMovie.Models;
+using MovieApp.Models;
 
-namespace RazorPagesMovie
+namespace MovieApp
 {
     public class Program
     {

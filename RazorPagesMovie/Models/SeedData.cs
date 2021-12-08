@@ -4,21 +4,21 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-using RazorPagesMovie.Data;
+using MovieApp.Data;
 
-namespace RazorPagesMovie.Models
+namespace MovieApp.Models
 {
     public static class SeedData
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new RazorPagesMovieContext(
+            using (var context = new MovieContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<RazorPagesMovieContext>>()))
+                    DbContextOptions<MovieContext>>()))
             {
                 if (context == null || context.Movie == null)
                 {
-                    throw new ArgumentNullException("Null RazorPagesMovieContext");
+                    throw new ArgumentNullException("Null MovieContext");
                 }
 
                 // Look for any movies.

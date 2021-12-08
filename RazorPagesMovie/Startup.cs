@@ -10,9 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using RazorPagesMovie.Data;
+using MovieApp.Data;
 
-namespace RazorPagesMovie
+namespace MovieApp
 {
     public class Startup
     {
@@ -28,8 +28,8 @@ namespace RazorPagesMovie
         {
             services.AddRazorPages();
 
-            services.AddDbContext<RazorPagesMovieContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("RazorPagesMovieContext")));
+            services.AddDbContext<MovieContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("MovieContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
