@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+using MovieApp.Data;
 using MovieApp.Models;
 
 namespace MovieApp
@@ -24,6 +25,8 @@ namespace MovieApp
                 var services = scope.ServiceProvider;
                 try
                 {
+                    var context = services.GetRequiredService<MovieContext>();
+                    //context.Database.EnsureCreated();
                     SeedData.Initialize(services);
 
                 }
